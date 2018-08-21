@@ -1,0 +1,63 @@
+@import "../../assets/base.less";
+
+#index {
+    padding: 10px 0 40px;
+
+    section .items{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+        }
+
+        .author {
+            width: 90px;
+            text-align: center;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .name {
+                word-break: break-all;
+                color: @textLighterColor;
+            }
+        }
+
+        .content {
+            flex: 1;
+            margin-left: 10px;
+
+            h3 {
+                float: left;
+                max-width: 60%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-bottom: 10px;
+                margin-right: 4px;
+                color: #333;
+            }
+            .time {
+                float: left;
+                margin-top: 6px;
+                color: @textLighterColor;
+                font-size: 12px;
+            }
+            p{
+                color: #333;
+                word-break: break-all;
+            }
+        }
+        
+    }
+
+    .pagination{
+        margin-top: 30px;
+        text-align: center;
+    }  
+}

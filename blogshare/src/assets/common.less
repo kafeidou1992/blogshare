@@ -1,0 +1,35 @@
+@import './base.less';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px/1.6 Arial,"Microsoft YaHei","黑体","宋体",sans-serif;
+    color: #333;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.el-textarea__inner:focus{
+    border-color: @themeColor;
+}
+
+.el-input__inner:focus{
+    border-color: @themeColor;
+}
+
+.pagination{
+    li.active,li:hover, button:hover{
+        color: @themeColor;
+    }
+    button:disabled{
+        color: #c0c4cc;
+    }
+}
+

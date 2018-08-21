@@ -1,0 +1,38 @@
+@import '../../assets/base.less';
+
+#create {
+    margin-bottom: 30px;
+    h2 {
+        font-weight: normal;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-weight: normal;
+        margin-bottom: 6px;
+    }
+    .tip {
+        text-align: right;
+        color: @textLighterColor;
+        font-size: 12px;
+    }
+    .err{
+        color: red;
+    }
+    .atIndex{
+        margin-bottom: 10px;
+    }
+
+    .el-button {
+        color: #fff;
+        background-color: @themeColor;
+        border-radius: 4px; 
+        padding: 8px 10px;
+        
+        &.disable{
+            background-color: #777;
+            cursor: not-allowed;
+        }
+    }
+}
