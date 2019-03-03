@@ -7,7 +7,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 
 export default function (url,method='get',data={}){
     return new Promise((resolve,reject)=>{
-        let option={
+        const option={
             url,
             method: method.toLowerCase()
         }

@@ -24,26 +24,26 @@ const mutations = {
 
 const actions = {
     async register(context,{username,password}){
-        let res = await auth.register({username,password}).catch(err=>{console.log(err)})
+        let res = await auth.register({username,password})
         context.commit('setUser',{user: res.data})
         context.commit('setIslogin',{islogin: true})
     },
 
     async login({commit},{username,password}){
-        let res = await auth.login({username,password}).catch(err=>{console.log(err)})
+        let res = await auth.login({username,password})
         commit('setUser',{user: res.data})
         commit('setIslogin',{islogin: true})
     },
 
     async logout({commit}){
-        await auth.logout().catch(err=>{console.log(err)})
+        await auth.logout()
         commit('setUser',{user: null})
         commit('setIslogin',{islogin: false})
     },
 
     async islogin({commit,state}){
         if(state.islogin) return true
-        let res = await auth.islogin().catch(err=>{console.log(err)})
+        let res = await auth.islogin()
         commit('setIslogin',{islogin: res.isLogin})
         if(res.isLogin){
             commit('setUser',{user: res.data})

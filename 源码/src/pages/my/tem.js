@@ -50,7 +50,6 @@ export default {
       }).then(res=>{
         this.$message.success(res.msg)
         this.getData(parseInt(this.$route.query.page) || 1)
-        // this.blogs = this.blogs.filter(blog => blog.id!==val)
       })
     }
   }

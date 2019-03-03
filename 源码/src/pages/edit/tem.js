@@ -37,7 +37,7 @@ export default {
         title: this.title,
         content: this.content,
         description: this.description,
-        atIndex: this.atIndex
+        atIndex: this.atIndex===false?'false':this.atIndex   // 后台bug，修改成不显示到首页时，需传'false'才有效，false无效
       }).then(res=>{
         this.$message.success(res.msg)
         this.$router.push({name:'detail',params:{blogid: res.data.id}})

@@ -12,7 +12,7 @@
         </router-link> 
       </div>
     </template>
-    <template v-if="islogin">
+    <template v-else>
       <h1><router-link to="/">Let's share</router-link></h1>
       <router-link to="/create">
         <i class="edit el-icon-edit"></i>
